@@ -1,0 +1,87 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BootManager - bootingbits</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">bootingbits</a>&nbsp;/&nbsp;<a href="../index.html">io.github.nathanpb.bb</a>&nbsp;/&nbsp;<a href="./index.html">BootManager</a><br/>
+<br/>
+<h1>BootManager</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BootManager</span></code>
+<p>Class responsible for starting the execution process and define the phase list. Can be extended to override event methods.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">BootManager</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Class responsible for starting the execution process and define the phase list. Can be extended to override event methods.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="after-execution.html">afterExecution</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">afterExecution</span><span class="symbol">(</span><span class="identifier" id="io.github.nathanpb.bb.BootManager$afterExecution(io.github.nathanpb.bb.phases.Phase, kotlin.Long)/phase">phase</span><span class="symbol">:</span>&nbsp;<a href="../../io.github.nathanpb.bb.phases/-phase/index.html"><span class="identifier">Phase</span></a><span class="symbol">, </span><span class="identifier" id="io.github.nathanpb.bb.BootManager$afterExecution(io.github.nathanpb.bb.phases.Phase, kotlin.Long)/initTime">initTime</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Executed after a phase get executed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="before-execution.html">beforeExecution</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">beforeExecution</span><span class="symbol">(</span><span class="identifier" id="io.github.nathanpb.bb.BootManager$beforeExecution(io.github.nathanpb.bb.phases.Phase)/phase">phase</span><span class="symbol">:</span>&nbsp;<a href="../../io.github.nathanpb.bb.phases/-phase/index.html"><span class="identifier">Phase</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Executed before a phase be executed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="on-startup-end.html">onStartupEnd</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onStartupEnd</span><span class="symbol">(</span><span class="identifier" id="io.github.nathanpb.bb.BootManager$onStartupEnd(kotlin.Long)/initTime">initTime</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Executed when the execution ends.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="on-startup-start.html">onStartupStart</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onStartupStart</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Executed when the execution starts.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="phase.html">phase</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">phase</span><span class="symbol">(</span><span class="identifier" id="io.github.nathanpb.bb.BootManager$phase(kotlin.Function1((io.github.nathanpb.bb.phases.Phase.PhaseWrapper, kotlin.Unit)))/body">body</span><span class="symbol">:</span>&nbsp;<a href="../../io.github.nathanpb.bb.phases/-phase/-phase-wrapper/index.html"><span class="identifier">PhaseWrapper</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../io.github.nathanpb.bb.phases/-phase/-phase-wrapper/index.html"><span class="identifier">PhaseWrapper</span></a></code>
+<p>Method to start the phase list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="startup.html">startup</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">startup</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Starts from the root phase.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

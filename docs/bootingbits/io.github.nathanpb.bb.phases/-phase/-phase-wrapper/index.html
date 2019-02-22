@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Phase.PhaseWrapper - bootingbits</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">bootingbits</a>&nbsp;/&nbsp;<a href="../../index.html">io.github.nathanpb.bb.phases</a>&nbsp;/&nbsp;<a href="../index.html">Phase</a>&nbsp;/&nbsp;<a href="./index.html">PhaseWrapper</a><br/>
+<br/>
+<h1>PhaseWrapper</h1>
+<code><span class="keyword">class </span><span class="identifier">PhaseWrapper</span></code>
+<p>Holds the <a href="execute.html">execute</a> and <a href="subphase.html">subphase</a> blocks.</p>
+<h3>Parameters</h3>
+<p><a name="phase"></a>
+<code>phase</code> - the phase to work on.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">PhaseWrapper</span><span class="symbol">(</span><span class="identifier" id="io.github.nathanpb.bb.phases.Phase.PhaseWrapper$<init>(io.github.nathanpb.bb.phases.Phase)/phase">phase</span><span class="symbol">:</span>&nbsp;<a href="../index.html"><span class="identifier">Phase</span></a><span class="symbol">)</span></code>
+<p>Holds the <a href="execute.html">execute</a> and <a href="subphase.html">subphase</a> blocks.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="phase.html">phase</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">phase</span><span class="symbol">: </span><a href="../index.html"><span class="identifier">Phase</span></a></code>
+<p>the phase to work on.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="execute.html">execute</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">execute</span><span class="symbol">(</span><span class="identifier" id="io.github.nathanpb.bb.phases.Phase.PhaseWrapper$execute(kotlin.Function0((kotlin.Unit)))/body">body</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Defines the phase execution lambda. <a href="execute.html#io.github.nathanpb.bb.phases.Phase.PhaseWrapper$execute(kotlin.Function0((kotlin.Unit)))/body">body</a> will be executed when the phase is being executed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="subphase.html">subphase</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">subphase</span><span class="symbol">(</span><span class="identifier" id="io.github.nathanpb.bb.phases.Phase.PhaseWrapper$subphase(kotlin.String, kotlin.Function1((io.github.nathanpb.bb.phases.Phase.PhaseWrapper, kotlin.Unit)))/display">display</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.github.nathanpb.bb.phases.Phase.PhaseWrapper$subphase(kotlin.String, kotlin.Function1((io.github.nathanpb.bb.phases.Phase.PhaseWrapper, kotlin.Unit)))/body">body</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PhaseWrapper</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Creates a <a href="../index.html">Phase</a> that has the current phase as parent.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

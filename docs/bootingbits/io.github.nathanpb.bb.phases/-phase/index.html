@@ -1,0 +1,158 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Phase - bootingbits</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">bootingbits</a>&nbsp;/&nbsp;<a href="../index.html">io.github.nathanpb.bb.phases</a>&nbsp;/&nbsp;<a href="./index.html">Phase</a><br/>
+<br/>
+<h1>Phase</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Phase</span></code>
+<p>POJO for a single phase on boot process. Usually the developers will not directly interact with this, but with <a href="-phase-wrapper/index.html">PhaseWrapper</a> instead.</p>
+<h3>Parameters</h3>
+<p><a name="display"></a>
+<code>display</code> - the phase display text.</p>
+<p><a name="body"></a>
+<code>body</code> - phase body, here is defined subphases and execution blocks.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-phase-wrapper/index.html">PhaseWrapper</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">PhaseWrapper</span></code>
+<p>Holds the <a href="-phase-wrapper/execute.html">execute</a> and <a href="-phase-wrapper/subphase.html">subphase</a> blocks.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Phase</span><span class="symbol">(</span><span class="identifier" id="io.github.nathanpb.bb.phases.Phase$<init>(kotlin.String, kotlin.Function1((io.github.nathanpb.bb.phases.Phase.PhaseWrapper, kotlin.Unit)))/display">display</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.github.nathanpb.bb.phases.Phase$<init>(kotlin.String, kotlin.Function1((io.github.nathanpb.bb.phases.Phase.PhaseWrapper, kotlin.Unit)))/body">body</span><span class="symbol">:</span>&nbsp;<a href="-phase-wrapper/index.html"><span class="identifier">PhaseWrapper</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code>
+<p>POJO for a single phase on boot process. Usually the developers will not directly interact with this, but with <a href="-phase-wrapper/index.html">PhaseWrapper</a> instead.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="children.html">children</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">children</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">Phase</span></a><span class="symbol">&gt;</span></code>
+<p>Phase children list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="depth.html">depth</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">depth</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Phase dept, how many parents to reach the root.
+E.g:</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="display.html">display</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">display</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>the phase display text.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parent.html">parent</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">parent</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Phase</span></a><span class="symbol">?</span></code>
+<p>Phase parent.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="run.html">run</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">run</span><span class="symbol">: </span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>The executable block.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="format-display.html">formatDisplay</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">formatDisplay</span><span class="symbol">(</span><span class="identifier" id="io.github.nathanpb.bb.phases.Phase$formatDisplay(kotlin.Function1((io.github.nathanpb.bb.phases.Phase, kotlin.Any)))/body">body</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="./index.html"><span class="identifier">Phase</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Formats the phase according to a formatter.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-d-e-f-a-u-l-t_-f-o-r-m-a-t.html">DEFAULT_FORMAT</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">DEFAULT_FORMAT</span><span class="symbol">: </span><span class="symbol">(</span><a href="./index.html"><span class="identifier">Phase</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Formatter that returns the default message type. With indentation, index and the display text.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-i-n-d-e-n-t-a-t-i-o-n.html">INDENTATION</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">INDENTATION</span><span class="symbol">: </span><span class="symbol">(</span><a href="./index.html"><span class="identifier">Phase</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Formatter that returns only the required indentation. Each subphase means 4 spaces.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-i-n-d-e-x-e-d.html">INDEXED</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">INDEXED</span><span class="symbol">: </span><span class="symbol">(</span><a href="./index.html"><span class="identifier">Phase</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Formatter that returns only the index.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-root-phase/index.html">RootPhase</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">RootPhase</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Phase</span></a></code>
+<p>Just a dummy class to represent empty phases.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
